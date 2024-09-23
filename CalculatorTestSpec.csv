@@ -1,0 +1,13 @@
+Test Case ID,Test Name,Test Case Description,Input,Expected Result,Test Status,Remarks (if any)
+TC_01,ReturnZeroForNoInputs,"If no Input, return the result as zero",<space>,0,NEW,
+TC_02,ReturnZeroForInputZero,"If the input is zero, return the result as zero",0,0,NEW,
+TC_03,ReturnSumForInputNumbers,Return the sum for input numbers,"1, 5",6,NEW,
+TC_04,SumInputNumbersWithNewLine,"If the given input  numbers separated by \n characters, the numbers are added up and the sum is returned","1,\n3",4,NEW,
+TC_05,ReturnSumForDelimiters,"A delimiter  instead of comma for the given input is of the format ""//[delimiter]\n""",//;\n1;2,3,NEW,
+TC_06,GiveExpectionForNegativeInputs,"If the input is negative number, throw expection with Warining ""Input number is Negative""","-7, -5","Input number -7, -5 negative NOT ALLOWED",NEW,
+TC_07,IgnoreGreaterThanThousand,Numbers above 1000 should be ignored,"2, 1001",2,NEW,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
