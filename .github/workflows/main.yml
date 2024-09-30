@@ -1,4 +1,4 @@
-name: Build , Test and Cover
+name: Build, Test and Cover
 
 on:
   push:
@@ -16,7 +16,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-       
     - name: Set up CMake
       uses: threeal/cmake-action@main
 
@@ -26,15 +25,13 @@ jobs:
         sudo apt-get install -y lcov
         sudo apt-get install -y gcovr
         
-        
     - name: Lizard Runner
-      uses: Uno-Takashi/Lizard-Runner@v4
+      uses: uno-takashi/lizard-runner@v2  # Correct version and capitalization
       with:
           path: "./"
           CCN: "3"
           exclude: "./build/*"
           
-
     - name: Configure CMake
       run: cmake -Bbuild -H.
 
@@ -46,10 +43,10 @@ jobs:
         cd build
         ctest --output-on-failure
         
-    - name: collect coverage
+    - name: Collect coverage
       run: gcovr --gcov-exclude=".*Tests.*" --gcov-exclude=".*test.*" -r . --html --html-details -o coverage.html --print-summary
 
-    - name: create coverage artifact
+    - name: Create coverage artifact
       uses: actions/upload-artifact@v4
       with:
         name: coverage
