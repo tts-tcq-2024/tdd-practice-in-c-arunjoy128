@@ -2,7 +2,7 @@ int add(const char* input) {
     if (strcmp(input, "0") == 0) {
         return 0;
     }
-
+    
     if (contains_only_non_numeric(input)) {
         return 0;
     }
