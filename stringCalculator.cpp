@@ -1,3 +1,4 @@
+#include "StringCalculator.h"
 int add(const char* input) {
     if (strcmp(input, "0") == 0) {
         return 0;
