@@ -1,7 +1,6 @@
-#ifndef STRINGCALCULATOR_H
-#define STRINGCALCULATOR_H
+#ifndef STRING_CALCULATOR_H
+#define STRING_CALCULATOR_H
 
-// Function declaration
-int add(const char* input);
+int calculateStringSum(const char *inputString);
 
 #endif
