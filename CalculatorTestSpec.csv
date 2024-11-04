@@ -5,10 +5,10 @@ TC03,ReturnsSumOfInputNumbersSeparatedByCommasOrNewLines,"If the given input str
 TC04,ReturnsSumOfInputNumbersSeparatedByCustomDelimiterOrNewLines,"A custom delimiter (of any length) can be set as the default delimiter instead of comma if the beginning of the given input is of the format ""//[delimiter]\n"". The sum of numbers separated by either the custom delimiter or the new line character is returned","""//;;\n1;;2\n3""",6
 TC05,IgnoresCustomDelimiterWithoutCorrectFormat,"If a custom delimiter is to be set, it must be specified with the correct format i.e., preceeded by ""//"" and succeeded by ""\n"". Else it is ignored.","""//;1;1;1""",111
 TC06,ReturnsSumOfOnlyInputNumbersLessThanThousand,"If the given input consists of numbers that are greater than 1000, they are ignored and the sum of the other numbers is calculated and returned","""999,2""",1001
-,,,"""1000,2""",1002
-,,,"""1001,2""",2
-,,,"""1234,4567""",0
+"""1000,2""",1002
+"""1001,2""",2
+"""1234,4567""",0
 TC07,ReturnsZeroIfInpuTCringDoesNotHaveNumbers,"If there are no numbers in the input string, then the returned sum is 0 as there is nothing to add up",""",\n,""",0
-,,,"""Hello, world!""",0
+"""Hello, world!""",0
 TC08,IgnoresInputCharactersThatAreNeitherNumbersNorDelimiters,"If the given input consists of characters that are neither numbers not delimiters (e.g., spaces), they are ignored","""1, 2*1""",22
 TC09,ThrowsExceptionForNegativeInputNumbers,"If the given input consists of negative numbers, an exception is thrown and all the negative numbers are shown in the exception message","""-1,1,-1""","negatives not supported: -1, -1"
